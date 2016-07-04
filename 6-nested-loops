@@ -2,21 +2,18 @@
 
 using namespace std;
 
-
 int main()
 {
-
-int N=2;
+int tam=2;                                      //reemplazamos aqui hasta 835 como máximo
 int s=2;
+int a[tam][tam],b[tam][tam],c[tam][tam];
 
-int a[N][N],b[N][N],c[N][N];
-
-for(int jj=0;jj<N;jj+= s){
-        for(int kk=0;kk<N;kk+= s){
-                for(int i=0;i<N;i++){
-                        for(int j = jj; j<((jj+s)>N?N:(jj+s)); j++){
+for(int j=0;j<tam;j+= s){
+        for(int k=0;k<tam;k+= s){
+                for(int i=0;i<tam;i++){
+                        for(int j = j; j<((j+s)>tam?tam:(j+s)); j++){
                                 int temp = 0;
-                                for(int k = kk; k<((kk+s)>N?N:(kk+s)); k++){
+                                for(int k = k; k<((k+s)>tam?tam:(k+s)); k++){
                                         temp += a[i][k]*b[k][j];
                                 }
                                 c[i][j] += temp;
