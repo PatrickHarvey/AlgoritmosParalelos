@@ -1,0 +1,2 @@
+Ejercicios Cap 3
+Libro: Introduction to Parallel Programming
